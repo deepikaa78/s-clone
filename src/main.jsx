@@ -1,17 +1,19 @@
-import React from 'react'
-import ReactDom from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
-import PlayerContextProvider from './Context/PlayerContext.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PlayerContextProvider from './Context/PlayerContext.jsx';
 
-
-ReactDom.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <Routes>
+      <Route index path='/s-clone' element={<PlayerContextProvider></PlayerContextProvider>} />
+    </Routes>
     <PlayerContextProvider>
-    <App />
+        <App/>
     </PlayerContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
-)
+);

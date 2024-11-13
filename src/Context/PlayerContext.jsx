@@ -129,8 +129,9 @@ const PlayerContextProvider = (props) => {
 
     return (
         <PlayerContext.Provider value={contextValue}>
-            {props.children}
+        {props.children}
         </PlayerContext.Provider>
+
     );
 };
 
