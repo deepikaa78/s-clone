@@ -8,7 +8,11 @@ import PlayerContextProvider from './Context/PlayerContext.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-    <PlayerContextProvider><App/></PlayerContextProvider>
+    <PlayerContextProvider>
+    <Routes>
+     <Route path='/s-clone/' element={<App/>} />
+     </Routes>
+     </PlayerContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

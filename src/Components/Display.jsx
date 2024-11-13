@@ -24,8 +24,8 @@ const Display = () => {
   return (
     <div ref={displayRef} className='w-[100%] m-2 px-6 pt-4 rounded bg-[#121212] text-white overflow-auto lg:w-[75%] lg:ml-0 ' >
     <Routes>
-     <Route path='/s-clone/' element={<DisplayHome/>} />
-     <Route path='/s-clone/album/:id' element={<DisplayAlbum/>} />  {/* we mound the components displayhome in display by adding path */}
+     <Route path='/' element={<DisplayHome/>} />
+     <Route path='/album/:id' element={<DisplayAlbum/>} />  {/* we mound the components displayhome in display by adding path */}
     </Routes>
     </div>
   )
